@@ -1,3 +1,7 @@
+/* import font */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+
 @import 'tailwindcss';
 
 @plugin '@tailwindcss/typography';
@@ -5,23 +9,7 @@
 @import "tailwindcss-animated";
 @import "tailwindcss-intersect";
 
-@font-face {
-  font-family: 'Honk';
-  src: url('/fonts/Honk-Regular-VariableFont_MORF,SHLN.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Quicksand';
-  src: url('/fonts/Quicksand-VariableFont_wght.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Domine';
-  src: url('/fonts/Domine-Regular.ttf') format('truetype');
-}
-
 @theme {
-  /* Her tilføjes theme variable // tokens */
 
   /*Farver */
   --color-primary-400: #00E4F5;
@@ -32,9 +20,8 @@
   --color-secondary-600: #F57A00;
 
   /*Typografi */
-  --font-display: 'Honk', monospace;
-  --font-sans: 'Quicksand', sans-serif;
-  --font-serif: 'Domine', serif;
+  --font-display: "Sansation", sans-serif;
+  --font-sans: "Open Sans", sans-serif;
 }
 
 @layer base {
