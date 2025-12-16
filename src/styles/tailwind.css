@@ -11,13 +11,47 @@
 
 @theme {
 
-  /*Farver */
-  --color-primary-400: #00E4F5;
-  --color-primary-500: #006269;
-  --color-primary-600: #006D75;
-  --color-secondary-400: #F5E400;
-  --color-secondary-500: #F5A600;
-  --color-secondary-600: #F57A00;
+  /*Start på farver defintioner*/
+
+  /* Neutral */
+  --color-neutral-50: #f3f2f2;
+  --color-neutral-100: #DAD8D8;
+  --color-neutral-200: #C1BDBD;
+  --color-neutral-300: #A9A3A3;
+  --color-neutral-400: #908989;
+  --color-neutral-500: #766F6F;
+  --color-neutral-600: #5C5656;
+  --color-neutral-700: #423E3E;
+  --color-neutral-800: #272525;
+  --color-neutral-900: #0D0C0C;
+
+
+  /* Blue */
+   --color-blue-50: #E9F3FB;
+  --color-blue-100: #BEDAF4;
+  --color-blue-200: #92C1ED;
+  --color-blue-300: #66A8E5;
+  --color-blue-400: #3B8FDE;
+  --color-blue-500: #2175C4;
+  --color-blue-600: #1A5B99;
+  --color-blue-700: #12416D;
+  --color-blue-800: #0B2741;
+  --color-blue-900: #040D16;
+
+  /* Orange*/
+   --color-orange-50: #FFF2E6;
+  --color-orange-100: #FED9B4;
+  --color-orange-200: #FDBF82;
+  --color-orange-300: #FCA650;
+  --color-orange-400: #FB8C1E;
+  --color-orange-500: #E17304;
+  --color-orange-600: #AF5903;
+  --color-orange-700: #7D4002;
+  --color-orange-800: #4B2601;
+  --color-orange-900: #190D00;
+
+  /*Slut på farver defintioner*/
+ 
 
   /*Typografi */
   --font-display: "Sansation", sans-serif;
