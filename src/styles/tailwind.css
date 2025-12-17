@@ -60,6 +60,19 @@
   /*Typografi */
   --font-display: "Sansation", sans-serif;
   --font-sans: "Open Sans", sans-serif;
+
+
+/* Animationer */
+
+ --animate-button: button 1s ease-in-out ;  
+ 
+ @keyframes button {    
+  0%,    100% {      
+    transform: translateX(50%);  
+    animation-timing-function: cubic-bezier(.75,0,.25,1); 
+  }    
+}
+
 }
 
 @layer base {
