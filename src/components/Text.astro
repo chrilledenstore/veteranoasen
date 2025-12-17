@@ -1,11 +1,11 @@
 ---
 // Henter parametrene fra Astro.props
-const { type = "normal", font = "open", stylingclasses = "text-md lg:text-lg" } = Astro.props;
+const { type = "normal", font = "body", stylingclasses = "text-md lg:text-lg" } = Astro.props;
 
 const typeClasses = {
-  normal: "text-base",
-  bold: "text-bold",
-  italic: "text-italic",
+  normal: "font-base",
+  bold: "font-bold",
+  italic: "font-italic",
 };
 
 const fontClasses = {
