@@ -1,0 +1,46 @@
+---
+import Text from "./Text.astro"
+
+---
+
+
+<div class="flex flex-col items-center justify-center mx-auto">
+    <div class="mb-5" x-data="{ answer: '', custom: '' }">
+    <button type="button" :class="answer === 'Enkelt betaling' ? 'cursor-pointer bg-blue-700 text-white p-2 border-3 rounded-xl' : 'cursor-pointer hover:bg-blue-50 text-blue-700 p-2 border-3 rounded-xl'" @click="answer = 'Enkelt betaling'" ><Text font="body" type="bold" >Enkelt betaling</Text></button>
+    <button type="button" :class="answer === 'Gentagende betaling' ? 'cursor-pointer bg-blue-700 text-white p-2 border-3 rounded-xl' : 'cursor-pointer hover:bg-blue-50 text-blue-700 p-2 border-3 rounded-xl'" @click="answer = 'Gentagende betaling'" ><Text font="body" type="bold" >Gentagende betaling</Text></button>
+    </div>
+
+
+
+
+    <div x-data="{ answer: '', custom: '' }">
+    <button type="button" :class="answer === '100 kr' ? 'cursor-pointer bg-blue-700 text-white p-2 border-3 rounded-xl' : 'cursor-pointer hover:bg-blue-50 text-blue-700 p-2 border-3 rounded-xl'" @click="answer = '100 kr'" ><Text font="body" type="bold" >100 kr</Text></button>
+    <button type="button" :class="answer === '150 kr' ? 'cursor-pointer bg-blue-700 text-white p-2 border-3 rounded-xl' : 'cursor-pointer hover:bg-blue-50 text-blue-700 p-2 border-3 rounded-xl'" @click="answer = '150 kr'" ><Text font="body" type="bold" >150 kr</Text></button>
+    <button type="button" :class="answer === '200 kr' ? 'cursor-pointer bg-blue-700 text-white p-2 border-3 rounded-xl' : 'cursor-pointer hover:bg-blue-50 text-blue-700 p-2 border-3 rounded-xl'" @click="answer = '200 kr'" ><Text font="body" type="bold" >200 kr</Text></button>
+    <button
+        type="button"
+        :class="answer === 'andet beløb' || custom ? 'cursor-pointer bg-blue-700 text-white p-2 border-3 rounded-xl flex items-center gap-2' : 'cursor-pointer hover:bg-blue-50 text-blue-700 p-2 border-3 rounded-xl'"
+        @click="answer = 'andet beløb'"
+    >
+        <Text font="body" type="bold">Andet beløb</Text>
+        <template x-if="answer === 'andet beløb'">
+            <input
+                type="number"
+                min="1"
+                placeholder="Indtast beløb"
+                class="ml-2 p-1 border rounded-xl w-24 text-blue-700"
+                x-model="custom"
+                @click.stop
+            />
+        </template>
+
+    </button>
+
+    <div class="mt-8">
+        <template x-if="answer && (answer !== 'andet beløb')">
+            <Text font="body" type="bold">du har doneret <span x-text="answer.replace(' kr','')"></span> kr</Text>
+        </template>
+        <template x-if="answer === 'andet beløb' && custom">
+            <Text font="body" type="bold">du har doneret <span x-text="custom"></span> kr</Text>
+        </template>
+    </div>
