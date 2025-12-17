@@ -39,7 +39,7 @@
   --color-blue-900: #040D16;
 
   /* Orange*/
-   --color-orange-50: #FFF2E6;
+  --color-orange-50: #FFF2E6;
   --color-orange-100: #FED9B4;
   --color-orange-200: #FDBF82;
   --color-orange-300: #FCA650;
@@ -49,6 +49,10 @@
   --color-orange-700: #7D4002;
   --color-orange-800: #4B2601;
   --color-orange-900: #190D00;
+
+  /* daisyUI */
+  --color-primary: #12416D;
+  --color-secondary: #E17304;
 
   /*Slut på farver defintioner*/
  
