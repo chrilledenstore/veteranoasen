@@ -73,7 +73,32 @@
   }    
 }
 
+--animate-movedown: movedown 5s linear infinite;  
+
+ @keyframes movedown {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(50%);
+  }
+  }
+
+--animate-moveup: moveup 5s linear infinite;  
+
+ @keyframes moveup {
+  0% {
+    transform: translateY(61%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+  }
+
+
 }
+
+
 
 @layer base {
 
@@ -85,4 +110,4 @@
 
 @layer utilities{
   
-}
+  }

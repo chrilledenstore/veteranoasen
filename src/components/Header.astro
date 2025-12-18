@@ -1,6 +1,7 @@
 ---
 import Link from "./Link.astro";
 import Heading from "./Heading.astro";
+import Button from "./Button.astro";
 
 const pathname = new URL(Astro.request.url).pathname;
 const currentPath = pathname.slice(1); // remove the first "/"
@@ -26,6 +27,7 @@ const currentPath = pathname.slice(1); // remove the first "/"
           <li class="text-center py-2"><Link href="apply" underline="no">Ansøg</Link></li>
           <li class="text-center py-2"><Link href="komponentbibliotek" underline="no">Komponentbibliotek</Link></li>
         </li>
+        <li><Button color="orange" size="small" blink="/donate">Støt os!</Button></li>
       </ul>
       <!-- DESKTOP MENU SLUT -->
 
