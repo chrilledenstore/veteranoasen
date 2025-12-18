@@ -10,7 +10,7 @@ import Accordion from "../components/Accordion.astro";
 <MainLayout title="Ansøgning">
   <main class="container mx-auto">
     <!-- TOPPEN MED LINKS TIL ORGANISATIONERNE -->
-    <section class="mb-10 mt-35">
+    <section class="mb-10 mt-35 px-5">
       <div class="mb-10 grid md:grid-cols-2 gap-8 items-center justify-center max-w-7xl mx-auto">
         <div>
           <div class="mb-5">
@@ -20,7 +20,7 @@ import Accordion from "../components/Accordion.astro";
             <Text font="body" type="regular">Kom med på en sommerlejr skabt til veteranfamilier – med plads til både ro, nærvær og gode oplevelser</Text>
           </div>
           <div class="mb-5">
-            <Button color="blue" size="medium" blink="#">Soldatermission</Button>
+            <Button color="blue" size="medium" blink="https://kfums-soldatermission.dk/">Soldatermission</Button>
             <Button color="blue" size="medium" blink="#">Veteran Oasen</Button>
           </div>
           <div class="relative flex">
@@ -74,12 +74,12 @@ import Accordion from "../components/Accordion.astro";
           <Text>Eventuelle særlige hensyn (høretelfoner, særlige behov, allergener, servicehund mm.)</Text>
         </div>
       </div>
-        <div class="pb-10">
-          <Button  color="orange" size="large" blink="/stepone">Ansøg nu</Button>
-        </div>
+      <div class="pb-10">
+        <Button color="orange" size="large" blink="/stepone">Ansøg nu</Button>
+      </div>
     </section>
 
-    <section class="grid md:grid-cols-2">
+    <section class="px-5 grid md:grid-cols-2">
       <div class="mt-7">
         <Heading htmlheading="h2" size="medium" font="display" type="bold">Ofte stillede spørgsmål</Heading>
         <div class="my-5">
