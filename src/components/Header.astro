@@ -1,6 +1,7 @@
 ---
 import Heading from "./Heading.astro";
 import Button from "./Button.astro";
+import Link from "./Link.astro";
 
 const pathname = new URL(Astro.request.url).pathname;
 const currentPath = pathname.slice(1); // remove the first "/"
@@ -24,6 +25,10 @@ const currentPath = pathname.slice(1); // remove the first "/"
           <li class="text-center py-2 hover:font-bold"><a href="about" class={currentPath === "about" ? "" : ""}>Om os</a></li>
           <li class="text-center py-2 hover:font-bold"><a href="apply" class={currentPath === "apply" ? "" : ""}>Ansøg</a></li>
           <li class="text-center py-2 hover:font-bold"><a href="komponentbibliotek" class={currentPath === "komponentbibliotek" ? "" : ""}>Komponentbibliotek</a></li>
+          <li class="text-center py-2 hover:font-bold"><Link href="/" underline="no" class:list={[currentPath === "" ? "font-bold underline" : ""]}>Forside</Link></li>
+          <li class="text-center py-2 hover:font-bold"><Link href="/about" underline="no" class:list={[currentPath === "about" ? "font-bold underline" : ""]}>Om os</Link></li>
+          <li class="text-center py-2 hover:font-bold"><Link href="/apply" underline="no" class:list={[currentPath === "apply" ? "font-bold underline" : ""]}>Ansøg</Link></li>
+          <li class="text-center py-2 hover:font-bold"><Link href="/komponentbibliotek" underline="no" class:list={[currentPath === "komponentbibliotek" ? "font-bold underline" : ""]}>Komponentbibliotek</Link></li>
         <li><Button color="orange" size="small" blink="/donation">Støt os!</Button></li>
       </ul>
       <!-- DESKTOP MENU SLUT -->
@@ -42,6 +47,10 @@ const currentPath = pathname.slice(1); // remove the first "/"
       <li class="text-center py-4 hover:font-bold"><a href="about" class={currentPath === "about" ? "" : ""}>Om os</a></li>
       <li class="text-center py-4 hover:font-bold"><a href="apply" class={currentPath === "apply" ? "" : ""}>Ansøg</a></li>
       <li class="text-center py-4 hover:font-bold"><a href="komponentbibliotek" class={currentPath === "komponentbibliotek" ? "" : ""}>Komponentbibliotek</a></li>
+        <li class="text-center py-4 hover:font-bold"><Link href="/" underline="no" class:list={[currentPath === "" ? "font-bold underline" : ""]}>Forside</Link></li>
+        <li class="text-center py-4 hover:font-bold"><Link href="/about" underline="no" class:list={[currentPath === "about" ? "font-bold underline" : ""]}>Om os</Link></li>
+        <li class="text-center py-4 hover:font-bold"><Link href="/apply" underline="no" class:list={[currentPath === "apply" ? "font-bold underline" : ""]}>Ansøg</Link></li>
+        <li class="text-center py-4 hover:font-bold"><Link href="/komponentbibliotek" underline="no" class:list={[currentPath === "komponentbibliotek" ? "font-bold underline" : ""]}>Komponentbibliotek</Link></li>
       <li class="text-center py-4"><Button color="orange" size="small" blink="/donation">Støt os!</Button></li>
     </ul>
   </nav>
