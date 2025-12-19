@@ -59,32 +59,34 @@ import SingleAccordion from "../components/SingleAccordion.astro";
 
     <!-- MIDTEN MED INFO OM ANSØGNING -->
 
-    <section class="bg-blue-700 text-white text-center w-full mb-20">
-      <div class="container mx-auto p-20">
-        <Heading htmlheading="h3" size="medium" font="display">Når du tilmelder dig, skal du oplyse:</Heading>
+    <section class="bg-blue-700 text-white text-center w-full mb-20 overflow-hidden skew-y-4">
+      <div class="-skew-y-4">
+          <div class="container mx-auto p-20">
+            <Heading htmlheading="h3" size="medium" font="display">Når du tilmelder dig, skal du oplyse:</Heading>
+          </div>
+          <div id="apply-info-row" class="md:flex md:mb-20 max-w-7xl mx-auto gap-20">
+            <div class="container mx-auto mb-20 md:mb-0 fade-down-info">
+              <img src="/illust/people.svg" alt="people" class="w-32 mx-auto mb-6" />
+              <Text>Antal deltagere (med alder)</Text>
+            </div>
+            <div class="container mx-auto mb-20 md:mb-0 fade-down-info">
+              <img src="/illust/speakbubble.svg" alt="speakbubble" class="w-32 mx-auto mb-6" />
+              <Text>En kort tekst om, hvorfor jeres familie ønsker at deltage </Text>
+            </div>
+            <div class="container mx-auto mb-20 md:mb-0 fade-down-info">
+              <img src="/illust/bus.svg" alt="bus" class="w-32 mx-auto mb-6" />
+              <Text>Behov for afhentning ved Aalborg banegård</Text>
+            </div>
+            <div class="container mx-auto mb-20 md:mb-0 fade-down-info">
+              <img src="/illust/dog.svg" alt="dog" class="w-32 mx-auto mb-6" />
+              <Text>Eventuelle særlige hensyn (høretelfoner, særlige behov, allergener, servicehund mm.)</Text>
+            </div>
+          </div>
+          <div class="pb-20 pt-10">
+            <Button  color="orange" size="large" blink="/stepone">Ansøg nu</Button>
+          </div>
+        </div>
       </div>
-      <div id="apply-info-row" class="md:flex md:mb-20 max-w-7xl mx-auto gap-20">
-        <div class="container mx-auto mb-20 md:mb-0 fade-down-info">
-          <img src="/illust/people.svg" alt="people" class="w-32 mx-auto mb-6" />
-          <Text>Antal deltagere (med alder)</Text>
-        </div>
-        <div class="container mx-auto mb-20 md:mb-0 fade-down-info">
-          <img src="/illust/speakbubble.svg" alt="speakbubble" class="w-32 mx-auto mb-6" />
-          <Text>En kort tekst om, hvorfor jeres familie ønsker at deltage </Text>
-        </div>
-        <div class="container mx-auto mb-20 md:mb-0 fade-down-info">
-          <img src="/illust/bus.svg" alt="bus" class="w-32 mx-auto mb-6" />
-          <Text>Behov for afhentning ved Aalborg banegård</Text>
-        </div>
-
-        <div class="container mx-auto mb-20 md:mb-0 fade-down-info">
-          <img src="/illust/dog.svg" alt="dog" class="w-32 mx-auto mb-6" />
-          <Text>Eventuelle særlige hensyn (høretelfoner, særlige behov, allergener, servicehund mm.)</Text>
-        </div>
-      </div>
-        <div class="pb-20 pt-10">
-          <Button  color="orange" size="large" blink="/stepone">Ansøg nu</Button>
-        </div>
     </section>
 
     <section class="grid md:grid-cols-2 max-w-7xl mx-auto pl-5">
