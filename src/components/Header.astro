@@ -22,10 +22,10 @@ const currentPath = pathname.slice(1); // remove the first "/"
     <nav id="desktopmenu" class="hidden lg:block">
       <ul class="flex flex-row gap-5">
         <li class="">
-          <li class="text-center py-2"><Link href="/" underline="no">Forside</Link></li>
-          <li class="text-center py-2"><Link href="about" underline="no">Om os</Link></li>
-          <li class="text-center py-2"><Link href="apply" underline="no">Ansøg</Link></li>
-          <li class="text-center py-2"><Link href="komponentbibliotek" underline="no">Komponentbibliotek</Link></li>
+          <li class="text-center py-2"><a href="/">Forside</a></li>
+          <li class="text-center py-2"><a href="/about">Om os</a></li>
+          <li class="text-center py-2"><a href="/apply">Ansøg</a></li>
+          <li class="text-center py-2"><a href="/komponentbibliotek">Komponentbibliotek</a></li>
         </li>
         <li><Button color="orange" size="small" blink="/donation">Støt os!</Button></li>
       </ul>
@@ -41,10 +41,10 @@ const currentPath = pathname.slice(1); // remove the first "/"
   </div>
   <nav id="mobilmenu" class="flex flex-col content-center" x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false">
     <ul class="pb-5">
-      <li class="text-center py-4"><Link href="/" underline="no">Forside</Link></li>
-      <li class="text-center py-4"><Link href="about" underline="no">Om os</Link></li>
-      <li class="text-center py-4"><Link href="apply" underline="no">Ansøg</Link></li>
-      <li class="text-center py-4"><Link href="komponentbibliotek" underline="no">Komponentbibliotek</Link></li>
+      <li class="text-center py-4"><a href="/" underline="no">Forside</a></li>
+      <li class="text-center py-4"><a href="/about" underline="no">Om os</a></li>
+      <li class="text-center py-4"><a href="/apply" underline="no">Ansøg</a></li>
+      <li class="text-center py-4"><a href="/komponentbibliotek">Komponentbibliotek</a></li>
       <li class="text-center py-4"><Button color="orange" size="small" blink="/donation">Støt os!</Button></li>
     </ul>
   </nav>
