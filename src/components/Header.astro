@@ -23,9 +23,9 @@ const currentPath = pathname.slice(1); // remove the first "/"
       <ul class="flex flex-row gap-5">
         <li class="">
           <li class="text-center py-2"><Link href="/" underline="no">Forside</Link></li>
-          <li class="text-center py-2"><Link href="about" underline="no">Om os</Link></li>
-          <li class="text-center py-2"><Link href="apply" underline="no">Ansøg</Link></li>
-          <li class="text-center py-2"><Link href="komponentbibliotek" underline="no">Komponentbibliotek</Link></li>
+          <li class="text-center py-2"><Link href="/about" underline="no">Om os</Link></li>
+          <li class="text-center py-2"><Link href="/apply" underline="no">Ansøg</Link></li>
+          <li class="text-center py-2"><Link href="/komponentbibliotek" underline="no">Komponentbibliotek</Link></li>
         </li>
         <li><Button color="orange" size="small" blink="/donation">Støt os!</Button></li>
       </ul>
@@ -42,9 +42,9 @@ const currentPath = pathname.slice(1); // remove the first "/"
   <nav id="mobilmenu" class="flex flex-col content-center" x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false">
     <ul class="pb-5">
       <li class="text-center py-4"><Link href="/" underline="no">Forside</Link></li>
-      <li class="text-center py-4"><Link href="about" underline="no">Om os</Link></li>
-      <li class="text-center py-4"><Link href="apply" underline="no">Ansøg</Link></li>
-      <li class="text-center py-4"><Link href="komponentbibliotek" underline="no">Komponentbibliotek</Link></li>
+      <li class="text-center py-4"><Link href="/about" underline="no">Om os</Link></li>
+      <li class="text-center py-4"><Link href="/apply" underline="no">Ansøg</Link></li>
+      <li class="text-center py-4"><Link href="/komponentbibliotek" underline="no">Komponentbibliotek</Link></li>
       <li class="text-center py-4"><Button color="orange" size="small" blink="/donation">Støt os!</Button></li>
     </ul>
   </nav>
