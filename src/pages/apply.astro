@@ -10,20 +10,19 @@ import Accordion from "../components/Accordion.astro";
 <MainLayout title="Ansøgning">
   <main class="">
     <!-- TOPPEN MED LINKS TIL ORGANISATIONERNE -->
-    <section class="mb-10 mt-35 px-5">
-      <div class="mb-10 grid md:grid-cols-2 gap-8 items-center justify-center max-w-7xl mx-auto">
-        <div>
+    <section class="my-10 mx-5">
+      <div class="grid md:grid-cols-2 gap-8 items-center justify-center max-w-6xl mx-auto">
+        <div class="my-auto">
           <div class="mb-5">
             <div class="mb-5">
               <Heading htmlheading="h2" size="large" font="display">Et pusterum for hele familien <br /> – fyldt med hygge, aktiviteter og trygge ramme</Heading>
             </div>
             <Text font="body" type="regular">Kom med på en sommerlejr skabt til veteranfamilier – med plads til både ro, nærvær og gode oplevelser</Text>
           </div>
-          <div class="mb-5">
-            <Button color="blue" size="medium" blink="https://kfums-soldatermission.dk/">Soldatermission</Button>
-            <Button color="blue" size="medium" blink="#">Veteran Oasen</Button>
+          <div class="mb-10">
+            <Button color="orange" size="medium" blink="#">Ansøg</Button>
           </div>
-          <div class="relative flex items-center gap-2">
+          <div class="relative flex items-center gap-2 mb-20">
             <span class="flex items-center">
               <Text font="body" type="bold">4.2</Text>
               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-orange-400 ml-1" viewBox="0 0 20 20" fill="currentColor"
@@ -39,48 +38,55 @@ import Accordion from "../components/Accordion.astro";
             <img src="/imggggg/twitter-some.svg" alt="twitter social media" class="w-12 h-12 ml-2 transition-transform duration-200 hover:scale-110 hover:brightness-90 cursor-pointer" />
           </div>
         </div>
-        <div class="relative w-full flex justify-center">
-          <div class="relative grid grid-cols-30 grid-rows-30 w-[700px] h-[700px] mx-auto">
-          <!-- Blobinator as background image -->
-            <img src="/imggggg/legolego.webp" alt="Image 1" class="rounded-lg object-cover z-10 col-start-3 col-end-10 row-start-3 row-end-10 w-full h-full" />
-            <img src="/imggggg/beepboop.webp" alt="Image 2" class="rounded-lg object-cover z-10 col-start-20 col-end-27 row-start-8 row-end-15 w-full h-full" />
-            <img src="/imggggg/kidswithdads.webp" alt="Image 3" class="rounded-lg object-cover z-10 col-start-8 col-end-23 row-start-20 row-end-29 w-full h-full" />
-          </div>
+        <div class="relative w-full flex flex-col gap-8 justify-center md:hidden">
+          <!-- Mobile: Simple stacked grid -->
+            <img src="/imggggg/legolego.webp" alt="Image 1" class="rounded-lg object-cover w-full h-40 z-10 col-start-1 row-start-1" />
+            <img src="/imggggg/beepboop.webp" alt="Image 2" class="rounded-lg object-cover w-full h-40 z-10 col-start-1 row-start-2" />
+            <img src="/imggggg/kidswithdads.webp" alt="Image 3" class="rounded-lg object-cover w-full h-40 z-10 col-start-1 row-start-3" />
+        </div>
+          <!-- Desktop: Absolute bento layout -->
+        <div class="hidden lg:block relative w-[700px] h-[700px] lg:flex md:flex-wrap">
+            <img src="/imggggg/blobinator.svg" alt="bg-blobinator" class="w-full h-auto md:w-[750px]" />
+            <img src="/imggggg/legolego.webp" alt="Image 1" class="absolute top-10 left-[23%] w-56 h-65 rounded-lg object-cover" />
+            <img src="/imggggg/beepboop.webp" alt="Image 2" class="absolute top-45 right-[11%] w-56 h-65 rounded-lg object-cover" />
+            <img src="/imggggg/kidswithdads.webp" alt="Image 3" class="absolute bottom-40 left-[9%] w-80 h-56 rounded-lg object-cover" />
+        </div>
+
         </div>
       </div>
     </section>
 
     <!-- MIDTEN MED INFO OM ANSØGNING -->
 
-    <section class="bg-blue-700 text-white text-center w-full">
+    <section class="bg-blue-700 text-white text-center w-full mb-20">
       <div class="container mx-auto p-20">
         <Heading htmlheading="h3" size="medium" font="display">Når du tilmelder dig, skal du oplyse:</Heading>
       </div>
-      <div class="md:flex md:mb-20 max-w-7xl mx-auto gap-5">
-        <div class="container mx-auto">
+      <div class="md:flex md:mb-20 max-w-7xl mx-auto gap-20">
+        <div class="container mx-auto mb-20 md:mb-0">
           <img src="/illust/people.svg" alt="people" class="w-32 mx-auto mb-6" />
           <Text>Antal deltagere (med alder)</Text>
         </div>
-        <div class="container mx-auto">
+        <div class="container mx-auto mb-20 md:mb-0">
           <img src="/illust/speakbubble.svg" alt="speakbubble" class="w-32 mx-auto mb-6" />
           <Text>En kort tekst om, hvorfor jeres familie ønsker at deltage </Text>
         </div>
-        <div class="container mx-auto">
+        <div class="container mx-auto mb-20 md:mb-0">
           <img src="/illust/bus.svg" alt="bus" class="w-32 mx-auto mb-6" />
           <Text>Behov for afhentning ved Aalborg banegård</Text>
         </div>
 
-        <div class="container mx-auto">
+        <div class="container mx-auto mb-20 md:mb-0">
           <img src="/illust/dog.svg" alt="dog" class="w-32 mx-auto mb-6" />
           <Text>Eventuelle særlige hensyn (høretelfoner, særlige behov, allergener, servicehund mm.)</Text>
         </div>
       </div>
-      <div class="pb-10">
-        <Button color="orange" size="large" blink="/stepone">Ansøg nu</Button>
-      </div>
+        <div class="pb-20 pt-10">
+          <Button  color="orange" size="large" blink="/stepone">Ansøg nu</Button>
+        </div>
     </section>
 
-    <section class="px-5 grid md:grid-cols-2">
+    <section class="grid md:grid-cols-2 max-w-7xl mx-auto pl-5">
       <div class="mt-7">
         <Heading htmlheading="h2" size="medium" font="display" type="bold">Ofte stillede spørgsmål</Heading>
         <div class="my-5">
